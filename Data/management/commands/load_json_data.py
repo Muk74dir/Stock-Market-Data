@@ -1,5 +1,5 @@
 import json
-from Data.models import JSONModel
+from Data.models import JsonToSQLModel
 from django.core.management.base import BaseCommand
 
 class Command(BaseCommand):
@@ -12,7 +12,7 @@ class Command(BaseCommand):
             json_data = json.load(json_file)
             
             for item in json_data:
-                JSONModel.objects.create(
+                JsonToSQLModel.objects.create(
                     date = item['date'],
                     trade_code = item['trade_code'],
                     high = item['high'].replace(',', ''),
