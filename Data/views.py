@@ -1,8 +1,12 @@
 from django.shortcuts import render
 from django.views.generic import View
+from .models import JSONModel
 
 
 
 class HomeView(View):
+    context = {}
     def get(self, request):
-        return render(request, 'index.html')
+        all_data = JSONModel.objects.all()
+        self.context['all_data'] = all_data
+        return render(request, 'index.html', self.context)
