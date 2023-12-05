@@ -1,0 +1,21 @@
+.card-body{
+    border-radius: 15px;
+    padding: 30px;
+}
+.requiredField{
+    font-weight: bold;
+    padding: 3px;
+    color: white;
+}
+.form-control{
+    border-radius: 5px;
+}
+
+.asteriskField{
+    color: red;
+}
+
+ul{
+    margin-top: 10px;
+    color: white;
+}
