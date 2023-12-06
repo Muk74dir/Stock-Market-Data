@@ -16,3 +16,5 @@ class EditForm(forms.ModelForm):
         model = JsonToSQLModel
         fields = '__all__'
         
+class TradeSearchFrom(forms.Form):
+    search = forms.CharField(label='Search', required=False)
