@@ -65,8 +65,7 @@ class EditView(View):
     
 class DeleteView(View):
     def get(self, request, pk):
-        data = JsonToSQLModel.objects.get(pk=pk)
-        data.delete()
+        JsonToSQLModel.objects.get(pk=pk).delete()
         return redirect('index')
         
         
